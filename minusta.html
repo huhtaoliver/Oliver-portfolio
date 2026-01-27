@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minusta – Oliver Huhta</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+        }
+
+        header {
+            background: #111;
+            color: #fff;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header nav a {
+            color: #fff;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header nav a:hover {
+            color: #00bfff;
+        }
+
+        .hero {
+            position: relative;
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+            background-image: url('tausta.jpg'); /* sama kuva kuin etusivulla */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+
+        .hero h1,
+        .hero p {
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        section {
+            max-width: 900px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+
+        h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111;
+            color: #fff;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Portfolio</div>
+        <nav>
+            <a href="index.html">Etusivu</a>
+            <a href="minusta.html">Minusta</a>
+            <a href="index.html#projects">Projektit</a>
+            <a href="index.html#contact">Yhteys</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Oliver Huhta</h1>
+        <p>Innokas ohjelmistokehittäjä Oulunsalosta</p>
+    </div>
+
+    <section>
+        <h2>Lyhyt info minusta</h2>
+        <p>
+            Olen Oulunsalosta kotoisin oleva ohjelmistokehittäjä opiskelija, joka viihtyy parhaiten teknisten haasteiden ja käytännön ongelmanratkaisun parissa.
+            Olen rakentanut automaatioita Arduinolla ja Node-redillä. Olen pienesti kokenut Python, C++ ja C# -koodikielestä.
+            Opin mielelläni kaikkea, mikä liittyy tekniikkaan, verkkoihin ja ohjelmointiin.
+        </p>
+    </section>
+
+    <footer>
+        © 2026 Oliver Huhta – Portfolio
+    </footer>
+
+</body>
+</html>
