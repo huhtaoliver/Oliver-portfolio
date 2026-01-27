@@ -46,11 +46,17 @@
             overflow: hidden;
         }
         .hero::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.5); /* 50% musta */
-        z-index: 0;
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5); /* 50% musta */
+            z-index: 0;
+        }
+        /* Teksti näkyviin tummennuksen päällä */
+        .hero h1,
+        .hero p {
+        position: relative;
+        z-index: 1;
         }
 
         .hero h1 {
