@@ -45,6 +45,13 @@
             background-repeat: no-repeat;
             overflow: hidden;
         }
+        .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5); /* 50% musta */
+        z-index: 0;
+        }
 
         .hero h1 {
             font-size: 48px;
