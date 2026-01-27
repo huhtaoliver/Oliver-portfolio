@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <title>Suojattu CV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            text-align: center;
+            padding-top: 100px;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Syötä salasana nähdäksesi CV:n</h2>
+
+    <input type="password" id="pw" placeholder="Salasana">
+    <button onclick="checkPassword()">Jatka</button>
+
+    <script>
+        function checkPassword() {
+            const correct = "omaCV2026!"; 
+            const input = document.getElementById("pw").value;
+
+            if (input === correct) {
+                window.location.href = "cv.pdf"; // ← CV-tiedoston nimi
+            } else {
+                alert("Väärä salasana");
+            }
+        }
+    </script>
+
+</body>
+</html>
