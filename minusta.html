@@ -1,126 +1,157 @@
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minusta – Oliver Huhta</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-            color: #222;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minusta – Oliver Huhta</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0d0d0d;
+      color: #e0e0e0;
+    }
 
-        header {
-            background: #111;
-            color: #fff;
-            padding: 15px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    header {
+      background: #111;
+      color: #fff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #e405d1;
+    }
 
-        header nav a {
-            color: #fff;
-            margin-left: 20px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    header nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
 
-        header nav a:hover {
-            color: #00bfff;
-        }
+    header nav a:hover {
+      color: #e405d1;
+    }
 
-        .hero {
-            position: relative;
-            padding: 100px 20px;
-            text-align: center;
-            color: white;
-            background-image: url('tauusta2.jpg'); /* sama kuva kuin etusivulla */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            overflow: hidden;
-        }
+    .hero {
+      position: relative;
+      padding: 100px 20px;
+      text-align: center;
+      color: white;
+      background-image: url('tauusta2.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+    }
 
-        .hero::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 0;
-        }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
 
-        .hero h1,
-        .hero p {
-            position: relative;
-            z-index: 1;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-        }
+    .hero h1, .hero p {
+      position: relative;
+      z-index: 1;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    }
 
-        section {
-            max-width: 900px;
-            margin: auto;
-            padding: 50px 20px;
-        }
+    .hero h1 {
+      font-size: 60px;
+      font-weight: 700;
+      background: linear-gradient(270deg, #00f, #f0f, #00f);
+      background-size: 600% 600%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientMove 8s ease infinite;
+      text-shadow: 0 0 15px #e405d1;
+    }
 
-        h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
+    @keyframes gradientMove {
+      0% { background-position: 100% 50%; }
+      50% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #111;
-            color: #fff;
-            margin-top: 40px;
-        }
-    </style>
+    .hero p {
+      font-size: 22px;
+      animation: typing 4s steps(40, end) forwards, blink 0.75s step-end 4s 3;
+      overflow: hidden;
+      border-right: 2px solid #fff;
+      white-space: nowrap;
+      display: inline-block;
+      max-width: 100%;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      0%, 100% { border-color: transparent }
+      50% { border-color: white }
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #e405d1;
+      text-shadow: 0 0 10px #e405d1;
+    }
+
+    #about p {
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #111;
+      color: #fff;
+      margin-top: 40px;
+      border-top: 2px solid #e405d1;
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo">Minusta</div>
-        <nav>
-            <a href="index.html">Etusivu</a>
-            <a href="minusta.html">Minusta</a>
-            <a href="index.html#projects">Projektit</a>
-            <a href="index.html#contact">Yhteys</a>
-        </nav>
-    </header>
+  <header>
+    <div class="logo">Minusta</div>
+    <nav>
+      <a href="index.html">Etusivu</a>
+      <a href="minusta.html">Minusta</a>
+      <a href="index.html#projects">Projektit</a>
+      <a href="index.html#contact">Yhteys</a>
+    </nav>
+  </header>
 
-    <div class="hero">
-        <h1>Minusta - Oliver Huhta</h1>
-        <p>Pidemmin tietoa minusta</p>
-    </div>
-        
-    <head>
-        <style>
-            #about p {
-              font-size: 20px;
-              line-height: 1.6;
-            }
-          </style>
-        </head>
-    
-    <section id="about">
-        <h2>Minusta</h2>
-        <p>
-            Olen 16-vuotias poika Oulunsalon seuduilta. Olen aina työelämästä kiinnostunut ja innostunut oppimaan uusia asioita. Olen aina mennyt
-            sillä periaatteella että joka päivä kehittyy ja oppii. Olen ahkera, rauhallinen ja oma-aloitteinen, mutta osaan myös
-            toimia ryhmissä. Osaan työskennellä itsenäisesti ja aina muistan kysyä apua, vaikka olisin vähänkään epävarma.
-            Kokemus tietokoneiden peruskäytössä on hyvä,. Kiinnostun aina tietokoneista ja osaan kasata niitä. Minulla on 5+ vuotta itsenäistä
-            kokemusta videoiden editoinnista osaan sen perusteella esimerkiksi. somettaa ja tehdä luovia videoita. Voisin työn lisäksi vaikkapa tehdä
-            somevideoita firman sometileille jos innostaa. Pienet hyvät kokemukset ovat. Kuvien muokkaus photoshopissa, koodaus, office ohjelmien käyttö.
-        </p>
+  <div class="hero">
+    <h1>Minusta – Oliver Huhta</h1>
+    <p>Pidemmin tietoa minusta</p>
+  </div>
 
-    </section>
+  <section id="about">
+    <h2>Minusta</h2>
+    <p>
+      Olen 16-vuotias poika Oulunsalon seuduilta. Olen aina työelämästä kiinnostunut ja innostunut oppimaan uusia asioita. Olen aina mennyt sillä periaatteella että joka päivä kehittyy ja oppii. Olen ahkera, rauhallinen ja oma-aloitteinen, mutta osaan myös toimia ryhmissä. Osaan työskennellä itsenäisesti ja aina muistan kysyä apua, vaikka olisin vähänkään epävarma. Kokemus tietokoneiden peruskäytössä on hyvä. Kiinnostun aina tietokoneista ja osaan kasata niitä. Minulla on 5+ vuotta itsenäistä kokemusta videoiden editoinnista – osaan sen perusteella esimerkiksi somettaa ja tehdä luovia videoita. Voisin työn lisäksi vaikkapa tehdä somevideoita firman sometileille jos innostaa. Pienet hyvät kokemukset ovat: kuvien muokkaus Photoshopissa, koodaus, Office-ohjelmien käyttö.
+    </p>
+  </section>
 
-    <footer>
-        © 2026 Oliver Huhta – Portfolio
-    </footer>
+  <footer>
+    © 2026 Oliver Huhta – Portfolio
+  </footer>
 
 </body>
 </html>
