@@ -180,14 +180,14 @@
     }
     
     .typewriter {
+      display: inline-block;
       overflow: hidden;
       border-right: 2px solid #fff;
       white-space: nowrap;
-      margin: 0 auto;
       letter-spacing: 1px;
-      animation: typing 4s steps(40, end), blink 0.75s step-end infinite;
       font-size: 22px;
-      max-width: 100%;
+      animation: typing 4s steps(40, end) forwards, blink 0.75s step-end 4s 3;
+      width: 0; /* ← tärkeä! alkaa nollasta */
     }
 
     @keyframes typing {
