@@ -162,6 +162,22 @@
     .carousel-track {
       padding-left: 10px;
     }
+    .gradient-text {
+      font-size: 60px;
+      font-weight: 700;
+      background: linear-gradient(270deg, #00f, #f0f, #00f);
+      background-size: 600% 600%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientMove 8s ease infinite;
+      text-shadow: 0 0 15px #e405d1;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 100% 50%; }
+      50% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
 
   </style>
 </head>
@@ -178,10 +194,10 @@
   </header>
 
   <div class="hero">
-    <h1>Oliver Huhta</h1>
+    <h1 class="gradient-text">Oliver Huhta</h1>
     <p>Ohjelmistokehittäjä • Automaatio • Node‑RED • Arduino</p>
   </div>
-
+  
   <section id="about">
     <h2>Lyhyt info minusta</h2>
     <p>
