@@ -116,6 +116,8 @@
       border-radius: 12px;
       margin: 40px 0;
       border: 2px solid #e405d1;
+      padding: 20px; /* ← lisää tämä */
+      box-sizing: border-box; /* ← varmistaa että padding ei riko leveyttä */
     }
 
     .carousel-track {
@@ -154,9 +156,13 @@
       max-height: 160px;
       width: auto;
       object-fit: contain;
-      margin-right: 10px;
+      margin-right: 20px; /* ← kasvattaa kuvien väliä */
       border-radius: 8px;
     }
+    .carousel-track {
+      padding-left: 10px;
+    }
+
   </style>
 </head>
 
