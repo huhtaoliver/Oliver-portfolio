@@ -4,183 +4,235 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kotisivu - Oliver Huhta</title>
+
   <style>
+    /* Yleinen tyyli */
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #2e2e2e;
-      color: #222;
-      }
+      font-family: 'Segoe UI', sans-serif;
+      background: #0d0d0d;
+      color: #e0e0e0;
+    }
 
-     
-        header {
-            background: #111;
-            color: #fff;
-            padding: 15px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    /* Navigaatio */
+    header {
+      background: #111;
+      color: #fff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #e405d1;
+    }
 
-        header nav a {
-            color: #fff;
-            margin-left: 20px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        header nav a:hover {
-            color: #e405d1;
-        }
-
-        /* Hero */
-        .hero {
-            position: relative;
-            padding: 100px 20px;
-            text-align: center;
-            color: white;
-            background-image: url('tausta.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            overflow: hidden;
-        }
-        .hero::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.5); /* 50% musta */
-            z-index: 0;
-        }
-        /* Teksti näkyviin tummennuksen päällä */
-        .hero h1,
-        .hero p {
-        position: relative;
-        z-index: 1;
-        }
-
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-        }
-
-        .hero p {
-            font-size: 20px;
-            opacity: 0.9;
-        }
-
-        /* Osio */
-        section {
-            max-width: 900px;
-            margin: auto;
-            padding: 50px 20px;
-        }
-
-        h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
-
-        /* Projektikortit */
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: #e405d1;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #111;
-            color: #fff;
-            margin-top: 40px;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <div class="logo">Etusivu</div>
-        <nav>
-            <a href="https://osekk-my.sharepoint.com/:b:/g/personal/s5huol00_students_osao_fi/IQA4DZFWNVToT6N0GTUgCPsSAfJ-m69tGZh2U9nyeiznkKg?e=YAxPcL">Lataa CV</a>
-            <a href="minusta.html">Minusta</a>
-            <a href="#projects">Projektit</a>
-        </nav>
-    </header>
-
-    <head>
-        <style>
-            #about p {
-              font-size: 20px;
-              line-height: 1.6;
-            }
-          </style>
-        </head>
-
-
-    <div class="hero">
-        <h1>Oliver Huhta</h1>
-        <p>Innokas ohjelmistokehittäjä oulunsalosta.</p>
-    </div>
-
-    <section id="about">
-        <h2>Lyhyt info minusta</h2>
-        <p>
-            Olen Oulunsalosta kotoisin oleva ohjelmistokehittäjä opiskelija, joka viihtyy parhaiten teknisten haasteiden ja käytännön ongelmanratkaisun parissa.
-            Olen rakentanut automaatioita Arduinolla ja Node-redillä. Olen pienesti kokenut Pyhton, C+ ja C# koodikielestä. Opin mielelläni kaikkea, mikä liittyy 
-            tekniikkaan, verkkoihin ja ohjelmointiin.
-        </p>
-
-        <div style="text-align: center; margin: 40px 0;">
-    <h3>Lisää minusta:</h3>
-    <a href="minusta.html" style="
-      display: inline-block;
-      padding: 12px 24px;
-      background-color: #828282;
-      color: white;
+    header nav a {
+      color: #fff;
+      margin-left: 20px;
       text-decoration: none;
       font-weight: bold;
-      border-radius: 6px;
-      transition: background-color 0.3s ease;
-    ">Tutustu tarkemmin</a>
+      transition: 0.3s;
+    }
+
+    header nav a:hover {
+      color: #e405d1;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      padding: 120px 20px;
+      text-align: center;
+      color: white;
+      background-image: url('tausta.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      z-index: 0;
+    }
+
+    .hero h1, .hero p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 60px;
+      font-weight: 700;
+      text-shadow: 0 0 15px #e405d1;
+    }
+
+    .hero p {
+      font-size: 22px;
+      opacity: 0.9;
+    }
+
+    /* Osio */
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #e405d1;
+      text-shadow: 0 0 10px #e405d1;
+    }
+
+    /* Projektikortit */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #1a1a1a;
+      padding: 25px;
+      border-radius: 12px;
+      border: 1px solid #333;
+      box-shadow: 0 0 10px rgba(228, 5, 209, 0.2);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(228, 5, 209, 0.4);
+    }
+
+    /* Karuselli */
+    .carousel-container {
+      width: 100%;
+      overflow: hidden;
+      border-radius: 12px;
+      margin: 40px 0;
+      border: 2px solid #e405d1;
+    }
+
+    .carousel-track {
+      display: flex;
+      width: calc(300px * 6);
+      animation: slide 18s linear infinite;
+    }
+
+    .carousel-track img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      filter: brightness(0.85);
+    }
+
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* Yhteystiedot */
+    #contact p {
+      font-size: 20px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #111;
+      color: #fff;
+      margin-top: 40px;
+      border-top: 2px solid #e405d1;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">Oliver Huhta</div>
+    <nav>
+      <a href="minusta.html">Minusta</a>
+      <a href="#projects">Projektit</a>
+      <a href="https://osekk-my.sharepoint.com/:b:/g/personal/s5huol00_students_osao_fi/IQA4DZFWNVToT6N0GTUgCPsSAfJ-m69tGZh2U9nyeiznkKg?e=YAxPcL">Lataa CV</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>Oliver Huhta</h1>
+    <p>Ohjelmistokehittäjä • Automaatio • Node‑RED • Arduino</p>
+  </div>
+
+  <section id="about">
+    <h2>Lyhyt info minusta</h2>
+    <p>
+      Olen Oulunsalosta kotoisin oleva ohjelmistokehittäjäopiskelija, joka viihtyy teknisten haasteiden ja käytännön ongelmanratkaisun parissa.
+      Rakennan automaatioita Arduinolla ja Node‑REDillä, ja minulla on kokemusta Pythonista, C++:sta ja C#:sta.
+    </p>
+
+    <div style="text-align: center; margin: 40px 0;">
+      <a href="minusta.html" style="
+        display: inline-block;
+        padding: 14px 28px;
+        background-color: #e405d1;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 6px;
+        transition: 0.3s;
+      ">Tutustu tarkemmin</a>
     </div>
 
+    <!-- Kuvakaruselli -->
+    <div class="carousel-container">
+      <div class="carousel-track">
+        <img src="kuva1.jpg">
+        <img src="kuva2.jpg">
+        <img src="kuva3.jpg">
+        <img src="kuva1.jpg">
+        <img src="kuva2.jpg">
+        <img src="kuva3.jpg">
+      </div>
+    </div>
 
-    <section id="projects">
-        <h2>Projektit ja muuta</h2>
-        <div class="projects">
-            <div class="card">
-                <h3>Node-RED automaatio (Älykoti)</h3>
-                <p>Paikallinen automaatiojärjestelmä, joka yhdistää sensorit ja ohjaukset.</p>
-            </div>
+  </section>
 
-            <div class="card">
-                <h3>Robotin suunnittelu</h3>
-                <p>Tottakai kuvitteellinen, mutta hyödyllinen</p>
-            </div>
+  <section id="projects">
+    <h2>Projektit ja muuta</h2>
 
-            <div class="card">
-                <h3>LATAA CV TÄSTÄ</h3>
-                <p>Lataa CV alla olevasta linkistä.</p>
-                <a href="https://osekk-my.sharepoint.com/:b:/g/personal/s5huol00_students_osao_fi/IQA4DZFWNVToT6N0GTUgCPsSAfJ-m69tGZh2U9nyeiznkKg?e=YAxPcL">Lataa CV (salasana)</a>
-            </div>
-        </div>
-    </section>
+    <div class="projects">
+      <div class="card">
+        <h3>Node‑RED automaatio (Älykoti)</h3>
+        <p>Paikallinen automaatiojärjestelmä, joka yhdistää sensorit ja ohjaukset.</p>
+      </div>
 
-    <section id="contact">
-        <h2>Yhteystiedot</h2>
-        <p>Sähköposti: <strong>etunimi.sukunimi@example.com</strong></p>
-    </section>
+      <div class="card">
+        <h3>Robotin suunnittelu</h3>
+        <p>Kuvitteellinen, mutta opettavainen projekti.</p>
+      </div>
 
-    <footer>
-        © 2026 Oliver – Portfolio
-    </footer>
+      <div class="card">
+        <h3>Lataa CV</h3>
+        <p>CV ladattavissa alla olevasta linkistä.</p>
+        <a href="https://osekk-my.sharepoint.com/:b:/g/personal/s5huol00_students_osao_fi/IQA4DZFWNVToT6N0GTUgCPsSAfJ-m69tGZh2U9nyeiznkKg?e=YAxPcL" style="color:#fff;">Lataa CV</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Yhteystiedot</h2>
+    <p>Sähköposti: <strong>etunimi.sukunimi@example.com</strong></p>
+  </section>
+
+  <footer>
+    © 2026 Oliver – Portfolio
+  </footer>
+
 </body>
 </html>
