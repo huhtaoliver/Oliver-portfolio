@@ -6,17 +6,11 @@
   <title>Kotisivu - Oliver Huhta</title>
 
   <style>
-    html, body {
-      height: 100%;
-    }
-
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background: #0d0d0d;
       color: #e0e0e0;
-      display: flex;
-      flex-direction: column;
     }
 
     header {
@@ -84,7 +78,7 @@
       100% { background-position: 100% 50%; }
     }
 
-    /* Kirjoitusefekti */
+    /* Kirjoitusefekti – KORJATTU */
     .typewriter-wrapper {
       display: inline-block;
       max-width: fit-content;
@@ -111,6 +105,11 @@
       0%, 100% { border-color: transparent }
       50% { border-color: white }
     }
+    
+    #about p {
+      font-size: 20px;
+      line-height: 1.6;
+    }
 
     /* OSIOT */
     section {
@@ -124,11 +123,6 @@
       margin-bottom: 20px;
       color: #e405d1;
       text-shadow: 0 0 10px #e405d1;
-    }
-
-    #about p {
-      font-size: 20px;
-      line-height: 1.6;
     }
 
     /* PROJEKTIKORTIT */
@@ -145,10 +139,6 @@
       border: 1px solid #333;
       box-shadow: 0 0 10px rgba(228, 5, 209, 0.2);
       transition: 0.3s;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 250px; /* ← pakotettu korkeus */
     }
 
     .card:hover {
@@ -187,7 +177,15 @@
       100% { transform: translateX(-50%); }
     }
 
-    /* KOODIKIELET */
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #111;
+      color: #fff;
+      margin-top: 40px;
+      border-top: 2px solid #e405d1;
+    }
     .code-images {
       display: flex;
       justify-content: center;
@@ -206,16 +204,6 @@
 
     .code-images img:hover {
       transform: scale(1.1);
-    }
-
-    /* FOOTER */
-    footer {
-      text-align: center;
-      padding: 25px;
-      background: #111;
-      color: #fff;
-      border-top: 2px solid #e405d1;
-      margin-top: auto;
     }
   </style>
 </head>
@@ -275,20 +263,19 @@
         <img src="kuva5.png">
       </div>
     </div>
-
+    
     <h2>Koodikielet</h2>
-
+    
     <div class="code-images">
       <img src="oma1.png">
       <img src="oma2.png">
       <img src="oma3.png">
     </div>
-  </section>
+    
+     <section id="projects">
+      <h2>Projektit ja muuta</h2>
 
-  <section id="projects">
-    <h2>Projektit ja muuta</h2>
-
-    <div class="projects">
+      <div class="projects">
       <div class="card">
         <h3>Node‑RED automaatio (Älykoti)</h3>
         <p>Paikallinen automaatiojärjestelmä, joka yhdistää sensorit ja ohjaukset.</p>
@@ -304,8 +291,8 @@
         <p>CV:n lataus linkistä.</p>
         <a href="https://osekk-my.sharepoint.com/:b:/g/personal/s5huol00_students_osao_fi/IQA4DZFWNVToT6N0GTUgCPsSAfJ-m69tGZh2U9nyeiznkKg?e=YAxPcL" style="color:#fff;">Lataa CV</a>
       </div>
-    </div>
-  </section>
+  
+      </section>
 
   <footer>
     © 2026 Oliver – Portfolio
