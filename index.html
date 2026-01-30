@@ -178,7 +178,27 @@
       50% { background-position: 0% 50%; }
       100% { background-position: 100% 50%; }
     }
+    
+    .typewriter {
+      overflow: hidden;
+      border-right: 2px solid #fff;
+      white-space: nowrap;
+      margin: 0 auto;
+      letter-spacing: 1px;
+      animation: typing 4s steps(40, end), blink 0.75s step-end infinite;
+      font-size: 22px;
+      max-width: 100%;
+    }
 
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+    
   </style>
 </head>
 
@@ -195,7 +215,7 @@
 
   <div class="hero">
     <h1 class="gradient-text">Oliver Huhta</h1>
-    <p>Ohjelmistokehittäjä • Automaatio • Node‑RED • Arduino</p>
+    <p class="typewriter">Ohjelmistokehittäjä • Automaatio • Node-RED • Arduino</p>
   </div>
   
   <section id="about">
